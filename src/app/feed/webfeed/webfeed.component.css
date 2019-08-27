@@ -1,0 +1,29 @@
+.webcam-wrapper {
+
+  margin: auto;
+  width: 50%;
+}
+.actions>ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.material-icons {
+
+  cursor: pointer;
+  color: black;
+}
+
+/*.shareBtn {*/
+/*  float: right;*/
+/*}*/
+
+/*.downloadBtn {*/
+/* float: left;*/
+/*}*/
+
+/*.captureBtn {*/
+
+/*}*/

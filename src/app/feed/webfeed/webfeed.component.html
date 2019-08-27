@@ -1,0 +1,25 @@
+<div class="webcam-wrapper">
+  <webcam *ngIf='!image'
+          [trigger]="imageObservable"
+          (imageCapture)="handleImage($event)"
+  ></webcam>
+  <div class="actions">
+    <ul>
+      <li class='large material-icons downloadBtn'>
+        <a download='image.jpeg' href='{{imageUrl}}' *ngIf="image">cloud_download</a></li>
+      <li class='large material-icons captureBtn' (click)='takeScreenShot()' *ngIf="!image">add_a_photo</li>
+
+      <li class='large material-icons captureBtn' (click)='takeAnother()' *ngIf="image">refresh</li>
+      <li class='large material-icons shareBtn' (click)='shareImage()'>share</li>
+    </ul>
+  </div>
+  <div *ngIf="image">
+    <img [src]='image.imageAsDataUrl'  alt="" style='webkit-transform: scaleX(-1); transform: scaleX(-1)'>
+  </div>
+
+
+
+
+
+</div>
+
